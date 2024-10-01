@@ -21,14 +21,15 @@ title-slide-attributes:
 
 ## Introduction to the unit
 
-* <img src="./images/mee.jpg" alt="Smiley face" style="padding:3px;float:right;width:150px;"> My name is Dr Killian O'Brien
-* Contacts: [k.m.obrien@mmu.ac.uk](mailto:k.m.obrien@mmu.ac.uk), [Teams chat](https://teams.microsoft.com/l/chat/0/0?users=k.m.obrien@mmu.ac.uk){target="_blank"}, Office JDE 114a (first floor of John Dalton East, Chester St end)
+* Teaching team: Dr Killian O'Brien <img src="./images/mee.jpg" alt="Smiley face" style="vertical-align:middle;padding:3px;width:100px;"> and Dr Safiullah Khan <img src="../safi.jpg" alt="Smiley face" style="vertical-align:middle;padding:3px;width:100px;">. See Moodle for contact details. 
 
 * 6G6Z0024 Applied Cryptography (15 credits)
 
+* Assessment is 100% coursework. A portfolio of exercises. 
+
 * Timetable
 
-* Let's look at the [Moodle](https://moodle.mmu.ac.uk/course/view.php?id=172138){target="_blank"} page for the unit.
+* Let's look at the [Moodle](https://moodle.mmu.ac.uk/course/view.php?id=183852){target="_blank"} page for the unit.
 
 ## Introduction to Number Theory
 
@@ -61,18 +62,18 @@ All these covered in <a href="https://mmu.on.worldcat.org/oclc/1064983791" targe
 
 * Recall, a *relation* in computer science / mathematics is a formula $A(x_1, \dots , x_n)$, so that when values are supplied for the variables $x_1, \dots , x_n$, results in a *statement* $A(x_1, \dots , x_n)$, i.e. something which is true or false.
 
-* For a pair of integers $a,b$, with $b \neq 0$, we say $b$ *divides* $a$, and write $b|a$ if there exists an integer $c$ such that 
+* For a pair of integers $a,b$, with $b \neq 0$, we say $b$ *divides* $a$, and write $b \mid a$ if there exists an integer $c$ such that 
 $$a = b \cdot c,$$
 and if no such integer $c$ exists then we say $b$ does *not divide* $a$, and can write $b \nmid a$.
 
-* So $b | a$ is a binary relation on $a,b$, i.e. a statement that is true or false, depending on the values of $a,b$.
+* So $b \mid a$ is a binary relation on $a,b$, i.e. a statement that is true or false, depending on the values of $a,b$.
 
-* If $b|a$ then we say $b$ is a *factor* or *divisor* of $a$. 
+* If $b \mid a$ then we say $b$ is a *factor* or *divisor* of $a$. 
 
 Examples
 
-* $3|15$, $5|15$, $1|15$, $15|15$.
-* $3 \nmid | 10$, $17 \nmid | 20$.
+* $3\mid 15$, $5\mid 15$, $1\mid 15$, $15\mid 15$.
+* $3 \nmid  10$, $17 \nmid  20$.
 
 ## Properties of divisibility
 
