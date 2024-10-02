@@ -2,15 +2,15 @@
 title: "Introduction to Number Theory"
 author:
 - Killian O'Brien
-- 6G6Z0024 Applied Cryptography 2023/24
-date: Lecture Week 02 -- Mon 09 October 2023
+- 6G6Z0024 Applied Cryptography 2024/25
+date: Lecture Week 02 -- Wed 09 October 2024
 transition: fade
 theme: killian
 width: 1920
 height: 1080
 margin: 0.05
 center: false
-revealjs-url: ../reveal.js
+revealjs-url: ../reveal.js2
 title-slide-attributes:
     data-background-color: rgb(0,47,108)	
     data-background-image: logowhite.png
