@@ -233,7 +233,7 @@ then we say $y$ is the <em>multiplicative inverse of $x$ modulo $n$</em>, and vi
 
 This is connected to the issue of cancellation in $\mathbb{Z}_n$.
 
-* If $(a+b) \equiv (a+c) \pmod{n} then b \equiv c \pmod{n}$.
+* If $(a+b) \equiv (a+c) \pmod{n}$ then $b \equiv c \pmod{n}$.
 * If $(a\cdot b) \equiv (a \cdot c) \pmod{n}$ then it's not neccessarily true that $b \equiv c \pmod{n}$.
 * However if $a^{-1} \pmod{n}$ exists then we can cancel from products as
 $$a^{-1} (a\cdot b) \equiv a^{-1} (a \cdot c) \pmod{n}$$

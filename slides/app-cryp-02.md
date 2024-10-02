@@ -2,15 +2,15 @@
 title: "Introduction to Number Theory"
 author:
 - Killian O'Brien
-- 6G6Z0024 Applied Cryptography 2023/24
-date: Lecture Week 02 -- Mon 09 October 2023
+- 6G6Z0024 Applied Cryptography 2024/25
+date: Lecture Week 02 -- Wed 09 October 2024
 transition: fade
 theme: killian
 width: 1920
 height: 1080
 margin: 0.05
 center: false
-revealjs-url: ../reveal.js
+revealjs-url: ../reveal.js2
 title-slide-attributes:
     data-background-color: rgb(0,47,108)	
     data-background-image: logowhite.png
@@ -19,20 +19,17 @@ title-slide-attributes:
     data-background-position: 95% 5%	
 ---
 
-## Introduction
+## Introduction to the unit
 
-* <img src="./images/mee.jpg" alt="Smiley face" style="padding:3px;float:right;width:150px;"> My name is Dr Killian O'Brien
-* Contacts: [k.m.obrien@mmu.ac.uk](mailto:k.m.obrien@mmu.ac.uk), [Teams chat](https://teams.microsoft.com/l/chat/0/0?users=k.m.obrien@mmu.ac.uk){target="_blank"}, Office JDE 114a (first floor of John Dalton East, Chester St end)
-
-* Office hours are Thurs 2-3pm &amp; Thur 4-5pm - before/after your Thurs lecture. I intend to be in the *Learning Studio*, come find me there. 
+* Teaching team: Dr Killian O'Brien <img src="./images/mee.jpg" alt="Smiley face" style="vertical-align:middle;padding:3px;width:100px;"> and Dr Safiullah Khan <img src="../safi.jpg" alt="Smiley face" style="vertical-align:middle;padding:3px;width:100px;">. See Moodle for contact details. 
 
 * 6G6Z0024 Applied Cryptography (15 credits)
 
-* The [Moodle](https://moodle.mmu.ac.uk/course/view.php?id=172138){target="_blank"} page for the unit.
+* Assessment is 100% coursework. A portfolio of exercises. 
 
-* The slides from the first lecture are repeated after this one for reference. New slides for lecture 02 [begin here](#prime-numbers)
+* Timetable
 
-* <a href="https://mmu.on.worldcat.org/oclc/1334132058" target="_blank">Stallings, Chapter 2: Introduction to Number Theory</a>
+* Let's look at the [Moodle](https://moodle.mmu.ac.uk/course/view.php?id=183852){target="_blank"} page for the unit.
 
 ## Introduction to Number Theory
 
@@ -51,11 +48,11 @@ Modern cryptography relies heavily on techniques and facts from *number theory*,
 * **Greatest Common Divisors** (gcd) and the **Euclidean Algorithm**.
 * The **congruence relation** and **modular arithmetic**.
 * **Prime** numbers and 
-	- The **Fundamental Theorem of Arithmetic** and **prime factorizations**
-	- **Fermat's Little Theorem**
-	- **Euler's totient** function
-	- **Euler's theorem**
-	- **Primality** testing, the **Miller-Rabin** test
+    - The **Fundamental Theorem of Arithmetic** and **prime factorizations**
+    - **Fermat's Little Theorem**
+    - **Euler's totient** function
+    - **Euler's theorem**
+    - **Primality** testing, the **Miller-Rabin** test
 * **The Chinese Remainder Theorem**
 * **Discrete logarithms**
 
@@ -65,18 +62,18 @@ All these covered in <a href="https://mmu.on.worldcat.org/oclc/1064983791" targe
 
 * Recall, a *relation* in computer science / mathematics is a formula $A(x_1, \dots , x_n)$, so that when values are supplied for the variables $x_1, \dots , x_n$, results in a *statement* $A(x_1, \dots , x_n)$, i.e. something which is true or false.
 
-* For a pair of integers $a,b$, with $b \neq 0$, we say $b$ *divides* $a$, and write $b|a$ if there exists an integer $c$ such that 
+* For a pair of integers $a,b$, with $b \neq 0$, we say $b$ *divides* $a$, and write $b \mid a$ if there exists an integer $c$ such that 
 $$a = b \cdot c,$$
-and if no such integer $c$ exists then we say $b$ does *not divide* $a$, and can write $b \nmid | a$.
+and if no such integer $c$ exists then we say $b$ does *not divide* $a$, and can write $b \nmid a$.
 
-* So $b | a$ is a binary relation on $a,b$, i.e. a statement that is true or false, depending on the values of $a,b$.
+* So $b \mid a$ is a binary relation on $a,b$, i.e. a statement that is true or false, depending on the values of $a,b$.
 
-* If $b|a$ then we say $b$ is a *factor* or *divisor* of $a$. 
+* If $b \mid a$ then we say $b$ is a *factor* or *divisor* of $a$. 
 
 Examples
 
-* $3|15$, $5|15$, $1|15$, $15|15$.
-* $3 \nmid | 10$, $17 \nmid | 20$.
+* $3\mid 15$, $5\mid 15$, $1\mid 15$, $15\mid 15$.
+* $3 \nmid  10$, $17 \nmid  20$.
 
 ## Properties of divisibility
 
@@ -236,7 +233,7 @@ then we say $y$ is the <em>multiplicative inverse of $x$ modulo $n$</em>, and vi
 
 This is connected to the issue of cancellation in $\mathbb{Z}_n$.
 
-* If $(a+b) \equiv (a+c) \pmod{n} then b \equiv c \pmod{n}$.
+* If $(a+b) \equiv (a+c) \pmod{n}$ then $b \equiv c \pmod{n}$.
 * If $(a\cdot b) \equiv (a \cdot c) \pmod{n}$ then it's not neccessarily true that $b \equiv c \pmod{n}$.
 * However if $a^{-1} \pmod{n}$ exists then we can cancel from products as
 $$a^{-1} (a\cdot b) \equiv a^{-1} (a \cdot c) \pmod{n}$$
