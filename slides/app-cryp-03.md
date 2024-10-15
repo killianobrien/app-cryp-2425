@@ -2,15 +2,15 @@
 title: "Symmetric ciphers and the Data Encryption Standard (DES)"
 author:
 - Killian O'Brien
-- 6G6Z0024 Applied Cryptography 2023/24
-date: Lecture Week 03 -- Mon 16 October 2023
+- 6G6Z0024 Applied Cryptography 2024/25
+date: Lecture Week 03 -- Wed 16 October 2024
 transition: fade
 theme: killian
 width: 1920
 height: 1080
 margin: 0.05
 center: false
-revealjs-url: ../reveal.js
+revealjs-url: ../reveal.js2
 title-slide-attributes:
     data-background-color: rgb(0,47,108)	
     data-background-image: logowhite.png
@@ -19,18 +19,17 @@ title-slide-attributes:
     data-background-position: 95% 5%	
 ---
 
-## Introduction
+## Introduction to the unit
 
-* <img src="./images/mee.jpg" alt="Smiley face" style="padding:3px;float:right;width:150px;"> My name is Dr Killian O'Brien
-* Contacts: [k.m.obrien@mmu.ac.uk](mailto:k.m.obrien@mmu.ac.uk), [Teams chat](https://teams.microsoft.com/l/chat/0/0?users=k.m.obrien@mmu.ac.uk){target="_blank"}, Office JDE 114a (first floor of John Dalton East, Chester St end)
-
-* Office hours are Thurs 2-3pm &amp; Thur 4-5pm - before/after your Thurs lecture.
-    - Normally in my office JD E114a
-    - Though I might be based in the Learning Studio for these office hours. I'll send a Moodle announcement/email if I am there. 
+* Teaching team: Dr Killian O'Brien <img src="./images/mee.jpg" alt="Smiley face" style="vertical-align:middle;padding:3px;width:100px;"> and Dr Safiullah Khan <img src="../safi.jpg" alt="Smiley face" style="vertical-align:middle;padding:3px;width:100px;">. See Moodle for contact details. 
 
 * 6G6Z0024 Applied Cryptography (15 credits)
 
-* The [Moodle](https://moodle.mmu.ac.uk/course/view.php?id=172138){target="_blank"} page for the unit.
+* Assessment is 100% coursework. A portfolio of exercises. 
+
+* Timetable
+
+* Let's look at the [Moodle](https://moodle.mmu.ac.uk/course/view.php?id=183852){target="_blank"} page for the unit.
 
 * Reading for this topic
     - <a href="https://mmu.on.worldcat.org/oclc/1334132058" target="_blank">Stallings, Chapter 3, Just Section 3.1: Symmetric Cipher Model</a>
