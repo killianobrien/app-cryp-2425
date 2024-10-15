@@ -212,7 +212,7 @@ right.</li>
 whole mapping table.</li>
 <li>However, with short block lengths, known statistical properties of
 the plaintexts would leak through to the ciphertexts and allow attacks,
-such as <em>fequency analyis</em>.</li>
+such as <em>frequency analysis</em>.</li>
 <li>So in practice the block bit-length needs to be large, eg. <span
 class="math inline">\(n=64\)</span> or <span
 class="math inline">\(128\)</span>.</li>
@@ -264,7 +264,8 @@ class="math inline">\(K_i\)</span>, derived from the overall key <span
 class="math inline">\(K\)</span>, and uses a <strong>round
 function</strong> <span class="math inline">\(F\)</span>.</li>
 <li>A <strong>substitution</strong> applied to <span
-class="math inline">\(LE_{i-1}\)</span> to defined by <span
+class="math inline">\(LE_{i-1}\)</span> to define <span
+class="math inline">\(RE_{i}\)</span> by by <span
 class="math display">\[RE_{i} = F(RE_{i-1}, K_{i}) \oplus
 LE_{i-1}.\]</span></li>
 <li><span class="math inline">\(\oplus\)</span> is bit-wise <span
@@ -336,7 +337,7 @@ will enhance security.</li>
 initial permutation of the plaintext and a corresponding final inverse
 initial permutation step.
 <img src="./images/DES.png" alt="" style="padding:5spx;float:right;height=100%;"></li>
-<li>Precise details are involved. See Appendix C of Stallings of
+<li>Precise details are involved. See Appendix C of Stallings for
 specifications of
 <ul>
 <li>initial permutation,</li>
@@ -399,8 +400,9 @@ rapidly.</li>
 is near the expected number of positions for two randomly selected <span
 class="math inline">\(64\)</span>-bit blocks to differ in.</li>
 <li>The small change in keys has <strong>avalanched</strong> through DES
-and heavily affected the output. This is one source of security of DES
-and Feistel ciphers in general.</li>
+and heavily affected the output. This avalanching effect due to small
+differences in keys is another source of security of DES and Feistel
+ciphers in general.</li>
 </ul>
 <!-- ## Stength of DES -->
 </section>

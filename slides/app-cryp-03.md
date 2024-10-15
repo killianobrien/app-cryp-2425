@@ -98,7 +98,7 @@ Some definitions, (Stallings, *Cryptography and Network Security*, Ch. 3)
 * The factorial operator $!$ is defined as $$N! = N \cdot (N-1) \cdot (N-2) \cdot \dots \cdot 3 \cdot 2 \cdot 1.$$
 * An example for $n=4$ shown on the right. 
 * The key $K$ is, in effect, the whole mapping table. 
-* However, with short block lengths, known statistical properties of the plaintexts would leak through to the ciphertexts and allow attacks, such as *fequency analyis*.
+* However, with short block lengths, known statistical properties of the plaintexts would leak through to the ciphertexts and allow attacks, such as *frequency analysis*.
 * So in practice the block bit-length needs to be large, eg. $n=64$ or $128$. 
 * But then the size of the mapping table is **very big** e.g. $2^{64}$ or $2^{128}$, which makes it hard to manage $K$ and keep it secure.
 * So instead, require some way to base block ciphers on *smaller keys*.
@@ -118,7 +118,7 @@ Some definitions, (Stallings, *Cryptography and Network Security*, Ch. 3)
 * Plaintext of block length $2w$ divided into two halves, $LE_0$ and $RE_0$.
 * Repeated rounds of processing applied.
 * Round $i$ takes inputs $LE_{i-1}$, $LR_{i-1}$ and a subkey $K_i$, derived from the overall key $K$, and uses a **round function** $F$.
-* A **substitution** applied to $LE_{i-1}$ to defined by
+* A **substitution** applied to $LE_{i-1}$ to define $RE_{i}$ by  by
 $$RE_{i} = F(RE_{i-1}, K_{i}) \oplus LE_{i-1}.$$
 * $\oplus$ is bit-wise $\text{XOR}$ operation.
 * A **permutation** is then applied for the round to output
@@ -152,7 +152,7 @@ $$LD_{1} = RE_{15} \text{ and } RD_1 = LE_{15}.$$
 ## Data Encryption Standard (DES)
 
 * DES follows the Feistel cipher structure with added steps of an initial permutation of the plaintext and a corresponding final inverse initial permutation step. <img src="./images/DES.png" alt="" style="padding:5spx;float:right;height=100%;"> 
-* Precise details are involved. See Appendix C of Stallings of specifications of
+* Precise details are involved. See Appendix C of Stallings for specifications of
     - initial permutation, 
     - round permutations
     - round function $F$
@@ -189,7 +189,7 @@ denote the $4$-bit values
 * $\delta$ column counts the number of bit positions where the intermediate blocks differ. 
 * Note the way $\delta$ increases rapidly.
 * By the end $\delta = 30$, which is near the expected number of positions for two randomly selected $64$-bit blocks to differ in. 
-* The small change in keys has **avalanched** through DES and heavily affected the output. This is one source of security of DES and Feistel ciphers in general.
+* The small change in keys has **avalanched** through DES and heavily affected the output. This avalanching effect due to small differences in keys is another source of security of DES and Feistel ciphers in general.
 
 <!-- ## Stength of DES -->
 
