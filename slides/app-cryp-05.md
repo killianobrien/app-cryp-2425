@@ -10,7 +10,7 @@ width: 1920
 height: 1080
 margin: 0.05
 center: false
-revealjs-url: ../reveal.js
+revealjs-url: ../reveal.js2
 title-slide-attributes:
     data-background-color: rgb(0,47,108)	
     data-background-image: logowhite.png
@@ -22,8 +22,8 @@ title-slide-attributes:
 ## Introduction
 
 * Cryptography relies heavily on mathematics
-* The notion of **finite fields** and **modular polynomial arithmetic** important in ciphers like AES and Elipptic Curves.
-* These mathematical systems provide the security and operational requirement needed by the ciphers. 
+* The notion of **finite fields** and **modular polynomial arithmetic** are important in ciphers like AES and Eliptic Curves.
+* These mathematical systems provide the security and operational requirements needed by the ciphers. 
 
 ## Hierarchy of algebraic systems
 
@@ -33,7 +33,7 @@ title-slide-attributes:
 * $\mathbb{R}$ can be thought of as consisting of every number on the *real number line*, a line extending from $-\infty$ to $+\infty$.
 * Real numbers $x$ can be written down as numbers with a (potentially infinite) decimal expansion. 
 * The real numbers, together with the usual operations of addition, $+$, and multiplication, $\cdot$, have the structure of what mathematicians call a **field**. 
-* That is the system $(\mathbb{R}, +, \cdot)$ satisfies the following properties.
+* That is, the system $(\mathbb{R}, +, \cdot)$ satisfies the following properties.
     - **(A1)** *Closure for addition:* If $a,b \in \mathbb{R}$ then $a+b \in \mathbb{R}$. 
     - **(A2)** *Associativity for addition:* For all $a,b,c \in \mathbb{R}$ we have $(a+b)+c = a+(b+c)$.
     - **(A3)** *Additive identity element:* There is an element $0 \in \mathbb{R}$ such that for all $a \in \mathbb{R}$ we have $a+0 = 0 + a = a$.
@@ -52,7 +52,7 @@ title-slide-attributes:
         - for all $a,b,c \in \mathbb{R}$ we have $a \cdot (b+c) = a \cdot b + a \cdot c$.
         - for all $a,b,c \in \mathbb{R}$ we have $(b+c)\cdot a = b \cdot a + c \cdot a$.
     - **(M4)** *Commutativity of multiplication:* For all $a,b \in \mathbb{R}$ we have $a\cdot b= b\cdot a$.
-    - **(M5)** *Multiplciative identity:* There is an element $1 \in \mathbb{R}$ such that for all $a \in \mathbb{R}$ we have $a\cdot 1 = 1 \cdot a = a$.
+    - **(M5)** *Multiplicative identity:* There is an element $1 \in \mathbb{R}$ such that for all $a \in \mathbb{R}$ we have $a\cdot 1 = 1 \cdot a = a$.
     - **(M6)** *No zero-divisors:* If $a,b \in \mathbb{R}$ and $a \cdot b = 0$ then $a=0$ or $b=0$.
 * A system $(S,+, \cdot)$ satisfying (A1) - (A4) and (M1)-(M3) is called a **ring**, and if it also satisfies (M4) it is called an **abelian ring**.
 * A system $(S,+, \cdot)$ satisfying (A1) - (A4) and (M1)-(M6) is called an **integral domain**.
@@ -63,7 +63,7 @@ title-slide-attributes:
 ## Fields
 
 * Essentially, a field $(F,+, \cdot)$ is a system within which we can perform addition, subtraction, multiplication and division, without leaving the set $F$, and the usual proeprties we are familiar with, from $\mathbb{R}$ say, hold true. 
-* Subtraction and division are defined interms of addition and multiplication as 
+* Subtraction and division are defined in terms of addition and multiplication as 
     - $a - b = a + (-b)$
     - $a/b = a \cdot b^{-1}$
 * Fields provide a mathematical system in which we have a rich calculation environment following well understood rules.
@@ -141,7 +141,7 @@ $$x^4+1 = (x+1)(x^3+x^2+x+1).$$
     - $a(x)$ and $b(x)$ are both divisible by $c(x)$. 
     - Any other common divisor of $a(x)$ and $b(x)$, also divides $c(x)$. 
 * Or equivalently, the $\gcd$ of $a(x)$ and $b(x)$ is the polynomial of maximum degree, that divides both $a(x)$ and $b(x)$.
-* <img src="./images/EAforpolys.png" alt="Stallings" style="padding:5spx;width=60%;float:right"> See specification or right, which is essentially the previous specification for the Euclidean algorithm, but now taking place for polynomials.
+* <img src="./images/EAforpolys.png" alt="Stallings" style="padding:5spx;width=60%;float:right"> See specification on the right (from Stallings), which is essentially the previous specification for the Euclidean algorithm, but now taking place for polynomials.
 
 
 
@@ -163,8 +163,8 @@ are polynomials with coefficients in $\mathbb{Z}_2$.
 
 ## Modular polynomial arithmetic and $\text{GF}(p^n)$
 
-* The finite fields $\text{GF}(p^n)$ for primes $p$ and any positive integer exponent $n$ do indeed exits, and can be constructed from **modular polynomial arithmetic** as follows.
-* Define $S$ to be the set of all polynomials of degree $n-1$, or less, and with coefficients coming from the field $\mathbb{Z}_p$, i.e. the coefficients follow the rules of integers arithmetic modulo $p$. 
+* The finite fields $\text{GF}(p^n)$ for primes $p$ and any positive integer exponent $n$ do indeed exist, and can be constructed from **modular polynomial arithmetic** as follows.
+* Define $S$ to be the set of all polynomials of degree $n-1$, or less, and with coefficients coming from the field $\mathbb{Z}_p$, i.e. the coefficients follow the rules of integer arithmetic modulo $p$. 
 * So $S$ consists of all polynomials $f(x)$ of the form 
 $$f(x) = a_{n-1} x^{n-1} + a_{n-2} x^{n-2} + \dots + a_1 x + a_0 = \sum_{i=0}^{n-1} a_i x^i, \quad a_i \in \mathbb{Z}_p.$$
 * In total, there are $p^n$ such polynomials, since there is a choice of $p$ elements for each of the $n$ coefficients $a_0, \dots , a_{n-1}$. 
