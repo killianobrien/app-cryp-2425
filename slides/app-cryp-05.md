@@ -3,7 +3,7 @@ title: "Finite fields for the Advanced Encryption Standard (AES)"
 author:
 - Killian O'Brien
 - 6G6Z0024 Applied Cryptography 2024/25
-date: Lecture Week 03 -- Wed 30 October 2024
+date: Lecture Week 05 -- Wed 30 October 2024
 transition: fade
 theme: killian
 width: 1920
