@@ -38,7 +38,8 @@ x^3 + 1
 \end{align*}
 $$
 So in fact we see that $x^2 + x + 1$ divides $x^3 + 1$, leaving remainder 0. So we can say that 
-$$\gcd(x^3 +1,\, x^2 + x +1) = x^2 + x + 1.$$
+$$\gcd(x^3 +1,\, x^2 + x +1) = x^2 + x + 1,$$
+when interpreted as polynomials with binary coefficients.
 For the second pair $(x^4 + 8x^3 + 7x + 8)$ and $(2x^3 + 9x^2 + 10x +1)$, with coefficients from $\mathbb{Z}_{11}$, the Euclidean algorithm runs as
 $$\begin{align*}
 x^4 + 8x^3 + 7x + 8
