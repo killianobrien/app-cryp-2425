@@ -178,6 +178,7 @@ $$f(x) = a_{n-1} x^{n-1} + a_{n-2} x^{n-2} + \dots + a_1 x + a_0 = \sum_{i=0}^{n
  * <img src="./images/GF8examp.png" alt="Stallings" style="padding:5spx;width=100px;float:right"> The Advanceed Encryption Standard (AES) uses such a field $\text{GF}(2^8)$, consisting of polynomials of degree less than or equal to 7, with binary coefficients and polynomial operations carried out modulo the irreducible polynomial 
  $$m(x) = x^8 + x^4 + x^3 + x +1.$$
  * The figure on the right shows the calculation of an example product in $\text{GF}(2^8)$.
+ * The properties of $\text{GF}(2^8)$, specifically the taking of multiplicative inverses, is a crucial step in a **S-box** substitution operation carried out on the bytes of a block in the AES cipher. 
 
 ## $\text{GF}(2^3)$ again. 
 
