@@ -170,7 +170,7 @@ $$f(x) = a_{n-1} x^{n-1} + a_{n-2} x^{n-2} + \dots + a_1 x + a_0 = \sum_{i=0}^{n
 * In total, there are $p^n$ such polynomials, since there is a choice of $p$ elements for each of the $n$ coefficients $a_0, \dots , a_{n-1}$. 
 * The behaviour of $+$ and $\cdot$ on $S$ will follow the usual rules of polynomial arithmetic and 
     - arithmetic with the coefficients $a_i$ is done under the rules of $\mathbb{Z}_p$, i.e. integer arithmetic modulo $p$, 
-    - if multiplication of polynomials results in a polynomial of degree $n$ or greater then the results is reduced modulo some specified irreducible polynomial $m(x)$, of degree $m$. That is, we divide the result by $m(x)$ and keep the remainder polynomial $r(x)$, which must have degree less than $n$. 
+    - if multiplication of polynomials results in a polynomial of degree $n$ or greater then the results is reduced modulo some specified irreducible polynomial $m(x)$, of degree $n$. That is, we divide the result by $m(x)$ and keep the remainder polynomial $r(x)$, which must have degree less than $n$. 
  * The resulting system $(S, + , \cdot)$ will be a field of $p^n$ elements. This shows that finite fields $\text{GF}(p^n)$ do exist.
 
 ## AES and $\text{GF}(2^8)$. 
