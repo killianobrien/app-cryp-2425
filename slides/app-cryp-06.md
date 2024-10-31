@@ -3,14 +3,14 @@ title: "Advanced Encryption Standard (AES)"
 author:
 - Killian O'Brien
 - 6G6Z0024 Applied Cryptography 2023/24
-date: Lecture Week 06 -- Mon 06 November 2023
+date: Lecture Week 06 --  Wed 06 November 2024
 transition: fade
 theme: killian
 width: 1920
 height: 1080
 margin: 0.05
 center: false
-revealjs-url: ../reveal.js
+revealjs-url: ../reveal.js2
 title-slide-attributes:
     data-background-color: rgb(0,47,108)	
     data-background-image: logowhite.png
@@ -91,6 +91,7 @@ of degree $n-1$ or less.
 * A corresponding inverse S-box table is used in the decryption algorithm.
 * Lots of detail in Stallings on the contruction of this S-box table. 
     - Designed like this to minimize any correlation between incoming and outgoing bits.
+    - The construction of the S-box table involves the process of taking multiplicative inverses in $\text{GF}(2^8)$, after interpreting the 8-bit bytes as polynomials formed from that sequence of 8 binary coefficients. 
 * An example substitute bytes transformation is shown here <img src="./images/egsbox.png" alt="Stallings" style="padding:5spx;width=80px;"> 
 
 ## The shift rows transformation
