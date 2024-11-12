@@ -2,8 +2,8 @@
 title: "Public Key Cryptography"
 author:
 - Killian O'Brien
-- 6G6Z0024 Applied Cryptography 2023/24
-date: Lecture Week 07 -- Mon 13 November 2023
+- 6G6Z0024 Applied Cryptography 2024/25
+date: Lecture Week 07 -- Wed 13 November 2024
 transition: fade
 theme: killian
 width: 1920
@@ -84,7 +84,7 @@ $$M = D \big ( PR_b, E(PU_b,M) \big ) = D \big ( PU_b, E(PR_b,M) \big ) .$$
 * Discovered in 1978 at MIT by Ron **R**ivest, Ade **S**hamir and Len **A**dleman.
 * It remains one of the most widely used general purpose public-key schemes.
 * It deals with messages, or message blocks, encoded as integers in the range $0$ to $n-1$, for some suitably large $n$. 
-* Typicall size for $n$ might be 1024 bots, or around 309 decimal digits.
+* Typicall size for $n$ might be 1024 bits, or around 309 decimal digits.
 * RSA makes use of exponentials in modular arithmetic. 
 * The message $M$ is an integer in the range $0 \leq M \leq n-1$. 
 * The receiver chooses integers $e$ and $d$, with the property that
