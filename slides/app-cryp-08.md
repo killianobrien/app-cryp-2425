@@ -2,15 +2,15 @@
 title: "Public Key Cryptography"
 author:
 - Killian O'Brien
-- 6G6Z0024 Applied Cryptography 2023/24
-date: Lecture Week 08 -- Mon 20 November 2023
+- 6G6Z0024 Applied Cryptography 2024/25
+date: Lecture Week 08 -- Wed 20 November 2024
 transition: fade
 theme: killian
 width: 1920
 height: 1080
 margin: 0.05
 center: false
-revealjs-url: ../reveal.js
+revealjs-url: ../reveal.js2
 title-slide-attributes:
     data-background-color: rgb(0,47,108)	
     data-background-image: logowhite.png
@@ -31,7 +31,7 @@ In this lecture we shall look at
 **Key Exchange**
 
 * In practice, public key cryptography works hand in hand with symmetric encryption, such as AES
-* A common approach is for public key encryption to be used to exchange a private key, that is then used to commence communication under symmetric encryption. 
+* A common approach is for public key encryption to be used to exchange a private key, that is then used to commence communication under symmetric encryption, such as AES. 
   
 **DH key exchange**
 
@@ -49,10 +49,10 @@ In this lecture we shall look at
     - So if $c=a^b$ then
     - $\log_a(c) = b$. 
     - We say $b$ is the *logarithm*, with base $a$, of $c$. 
-* You might see a function $\log$ mentioned without a base. Its meaning is usually defined from the context/discipline. 
-    - Computer scientists would usually mean $\log_2$
-    - Mathematicians would usually mean $\log_e$, the *natural logarithm*
-    - Engineers might usually mean $\log{10}$
+* You might see a function $\log$ mentioned without a base. Its meaning is usually determined by context/discipline in which it is used.  
+    - Computer scientists would usually mean $\log_2$,
+    - Mathematicians would usually mean $\log_e$, the *natural logarithm*,
+    - Engineers might usually mean $\log{10}$.
 
 ## What are discrete logarithms?
 
@@ -60,7 +60,7 @@ In this lecture we shall look at
 * Working modulo a prime $p$, if $c \equiv a^b \pmod{p}$ then  
     - $b$ is the discrete logarithm of $c$, to the base $a$, modulo $p$. 
     - Stallings introduces the notation $$b = \text{dlog}_{a,p}(c).$$
-* Usually the base used is a *primitive root* modulo $p$, i.e. a number $a$ whose powers generall **ALL** the non-zero elements modulo $p$, i.e. the residues $$ (a \text{ mod } p),\, (a^2 \text{ mod } p),\,  (a^3 \text{ mod } p), \dots , (a^{p-1} \text{ mod } p),$$ are all distinct and consist of the integers $$1, 2, \dots, p-1,$$ (though not in that order).
+* Usually the base used is a *primitive root* modulo $p$, i.e. a number $a$ whose powers generate **ALL** the non-zero elements modulo $p$, i.e. the residues $$ (a \text{ mod } p),\, (a^2 \text{ mod } p),\,  (a^3 \text{ mod } p), \dots , (a^{p-1} \text{ mod } p),$$ are all distinct and consist of the integers $$1, 2, \dots, p-1,$$ (though probably not in that order).
 * Security arises from the facts that 
     - computing modular exponentials is fast (using modular reduction, Euler's theorem and repeated squaring)
     - there is no known fast algorithm for computing discrete logarithms. So for suitable large $p$, it cannot be done in any practical way.
@@ -79,8 +79,8 @@ In this lecture we shall look at
 ## ElGamal cryptosystem
 
 * <img src="./images/elgamal.png" alt="Stallings" style="padding:5px;height=100%;float:right"> From 1984, provides an enhancement of DH key exchange that introduces an element of authentication into the exchanges. 
-* Stallings figure to the right shows what's required for Bob to send encrypted communication to Alice.
+* Stallings' figure to the right shows what's required for Bob to send encrypted communication to Alice.
 * Alice generates and publishes her public key $(q, \alpha, Y_A = \alpha^{X_A})$ as before, still retaining her private key $X_A$.
-* Bob prepares plaintext message block $M$ and an element $k$ that is sued to caluclate a temporary secret key $K = (Y_A^k \text{ mod } q)$.
+* Bob prepares plaintext message block $M$ and an element $k$ that is used to caluclate a temporary secret key $K = (Y_A^k \text{ mod } q)$.
 * Bob calculates $$C_1 = (\alpha^k \text{ mod } q), \, \, C_2 = (KM \text{ mod } q),$$ and sends the pair $(C_1, C_2)$ to Alice.
 * Alice can recover the secret key $K$ by computing $$K = (C_1^{X_A} \text{ mod } q),$$ and decrypt the message $M$ by computing $$M = ( C_2 K^{-1} \text{ mod } q).$$
