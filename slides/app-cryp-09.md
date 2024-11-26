@@ -3,7 +3,7 @@ title: "Cryptographic hash functions"
 author:
 - Killian O'Brien
 - 6G6Z0024 Applied Cryptography 2024/25
-date: Lecture Week 09 -- Wed 27 November 2023
+date: Lecture Week 09 -- Wed 27 November 2024
 transition: fade
 theme: killian
 width: 1920
