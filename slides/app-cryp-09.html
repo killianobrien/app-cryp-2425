@@ -227,7 +227,7 @@ fractional parts of the square roots of the first eight prime numbers
 (i.e. essentially random bits).</li>
 <li>An intermediate step of SHA-512 takes the block <span
 class="math inline">\(M_i\)</span> and previous intermediate hash buffer
-<span class="math inline">\(H_{i-1}\)</span> and process it with an
+<span class="math inline">\(H_{i-1}\)</span> and processes it with an
 80-round processing module <span class="math inline">\(F\)</span>.</li>
 <li>This produces a 512-bit output that is combined with an
 addition-like operation with <span
@@ -288,11 +288,11 @@ true.</li>
 <li><span class="math inline">\(\Sigma(a) = \text{ROTR}^{28}(a) \oplus
 \text{ROTR}^{34}(a) \oplus \text{ROTR}^{39}(a)\)</span>, where <span
 class="math inline">\(\text{ROTR}^n\)</span> denotes circular right
-shift if the bits by <span class="math inline">\(n\)</span> bits.</li>
-<li><span class="math inline">\(\Sigma(e) = \text{ROTR}^{14}(a) \oplus
-\text{ROTR}^{18}(a) \oplus \text{ROTR}^{41}(a)\)</span>, where <span
+shift of the bits by <span class="math inline">\(n\)</span> bits.</li>
+<li><span class="math inline">\(\Sigma(e) = \text{ROTR}^{14}(e) \oplus
+\text{ROTR}^{18}(e) \oplus \text{ROTR}^{41}(e)\)</span>, where <span
 class="math inline">\(\text{ROTR}^n\)</span> denotes circular right
-shift if the bits by <span class="math inline">\(n\)</span> bits.</li>
+shift of the bits by <span class="math inline">\(n\)</span> bits.</li>
 </ul>
 </section>
 <section id="sha-512-message-schedule-algorithm" class="slide level2">
@@ -304,7 +304,7 @@ This shows the operations within the one of the 80 rounds.</li>
 W_{15}\)</span> obtained directly from <span
 class="math inline">\(M_i\)</span>.</li>
 <li>Subsequent words obtained by processing previous words.</li>
-<li><span class="math inline">\(W_t = \sigma_1(T_{t-2}) + W_{t-7} +
+<li><span class="math inline">\(W_t = \sigma_1(W_{t-2}) + W_{t-7} +
 \sigma_0(W_{t-15}) + W_{t-16}\)</span></li>
 <li>These are word by word additions modulo <span
 class="math inline">\(2^{64}\)</span></li>
@@ -313,11 +313,12 @@ class="math inline">\(2^{64}\)</span></li>
 <li><span class="math inline">\(\sigma_1(x) = \text{ROTR}^{19}(x) \oplus
 \text{ROTR}^{61}(x) \oplus \text{SHR}^{6}(x)\)</span></li>
 <li>where <span class="math inline">\(\text{ROTR}^n\)</span> is as
-before, right circular shift, and <span
-class="math inline">\(\text{SHR}^n\)</span> is right shift of the 64-bit
-word by <span class="math inline">\(n\)</span> bits, and padding with
-<span class="math inline">\(64-n\)</span> zeros on the left. So <span
-class="math inline">\(\text{SHR}^n\)</span> loses bit information.</li>
+before, a right circular shift by <span class="math inline">\(n\)</span>
+bits, and <span class="math inline">\(\text{SHR}^n\)</span> is right
+shift of the 64-bit word by <span class="math inline">\(n\)</span> bits,
+and padding with <span class="math inline">\(64-n\)</span> zeros on the
+left. So <span class="math inline">\(\text{SHR}^n\)</span> loses bit
+information.</li>
 </ul>
 </section>
     </div>

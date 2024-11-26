@@ -109,7 +109,7 @@ title-slide-attributes:
 * Then the bit-length $L$ of $M$ is appended as an unsigned 128-bit integer.
 * We now have some number $N$ of 1024-bit blocks, $M_1, M_2, \dots, M_N$.
 * The intermediate hash buffer is initialized with standard initial values $H_0 = IV$, derived from the fractional parts of the square roots of the first eight prime numbers (i.e. essentially random bits). 
-* An intermediate step of SHA-512 takes the block $M_i$ and previous intermediate hash buffer $H_{i-1}$ and process it with an 80-round processing module $F$.
+* An intermediate step of SHA-512 takes the block $M_i$ and previous intermediate hash buffer $H_{i-1}$ and processes it with an 80-round processing module $F$.
 * This produces a 512-bit output that is combined with an addition-like operation with $H_{i-1}$.  
 * The final 512-bit output $H_N$ is the hash value of SHA-512.
 
@@ -129,16 +129,16 @@ title-slide-attributes:
 * Employs bit-wise logical functions $\text{Ch}$ and $\text{Maj}$, $\oplus$ denotes bit-wise $\text{XOR}$
 * $\text{Ch}(e,f,g) = (e \text{ AND } f) \oplus (\text{ NOT } e \text{ AND } g)$. This is equivalent to *If e then f, else g*.
 * $\text{Maj}(a,b,c) = (a \text{ AND } b) \oplus (a \text{ AND } c) \oplus (b \text{ AND } c)$. This is true only if the majority of the arguments (i.e. 2 or 3 of them) are true. 
-* $\Sigma(a) = \text{ROTR}^{28}(a) \oplus \text{ROTR}^{34}(a) \oplus \text{ROTR}^{39}(a)$, where $\text{ROTR}^n$ denotes circular right shift if the bits by $n$ bits. 
-* $\Sigma(e) = \text{ROTR}^{14}(a) \oplus \text{ROTR}^{18}(a) \oplus \text{ROTR}^{41}(a)$, where $\text{ROTR}^n$ denotes circular right shift if the bits by $n$ bits. 
+* $\Sigma(a) = \text{ROTR}^{28}(a) \oplus \text{ROTR}^{34}(a) \oplus \text{ROTR}^{39}(a)$, where $\text{ROTR}^n$ denotes circular right shift of the bits by $n$ bits. 
+* $\Sigma(e) = \text{ROTR}^{14}(e) \oplus \text{ROTR}^{18}(e) \oplus \text{ROTR}^{41}(e)$, where $\text{ROTR}^n$ denotes circular right shift of the bits by $n$ bits. 
 
 ## SHA-512 message schedule algorithm
 
 * <img src="./images/message-schedule.png" alt="Stallings" style="padding:5px;float:right"> This shows the operations within the one of the 80 rounds.
 * First 16 64-bit words $W_0, \dots, W_{15}$ obtained directly from $M_i$.
 * Subsequent words obtained by processing previous words. 
-* $W_t = \sigma_1(T_{t-2}) + W_{t-7} + \sigma_0(W_{t-15}) + W_{t-16}$
+* $W_t = \sigma_1(W_{t-2}) + W_{t-7} + \sigma_0(W_{t-15}) + W_{t-16}$
 * These are word by word additions modulo $2^{64}$
 * $\sigma_0(x) = \text{ROTR}^{1}(x) \oplus \text{ROTR}^{8}(x) \oplus \text{SHR}^{7}(x)$
 * $\sigma_1(x) = \text{ROTR}^{19}(x) \oplus \text{ROTR}^{61}(x) \oplus \text{SHR}^{6}(x)$
-* where $\text{ROTR}^n$ is as before, right circular shift, and $\text{SHR}^n$ is right shift of the 64-bit word by $n$ bits, and padding with $64-n$ zeros on the left. So $\text{SHR}^n$ loses bit information.
+* where $\text{ROTR}^n$ is as before, a right circular shift by $n$ bits, and $\text{SHR}^n$ is right shift of the 64-bit word by $n$ bits, and padding with $64-n$ zeros on the left. So $\text{SHR}^n$ loses bit information.
