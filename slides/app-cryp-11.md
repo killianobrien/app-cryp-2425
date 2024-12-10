@@ -4,7 +4,7 @@ author:
 - Killian O'Brien
 - 6G6Z0024 Applied Cryptography 2024/25
 date: Lecture Week 11 -- Wed 11 December 2024
-transition: fade
+transition: zoom
 theme: killian
 width: 1920
 height: 1080
