@@ -2,15 +2,15 @@
 title: "Miller-Rabin primality test"
 author:
 - Killian O'Brien
-- 6G6Z0024 Applied Cryptography 2023/24
-date: Lecture Week 11 -- Mon 11 December 2023
+- 6G6Z0024 Applied Cryptography 2024/25
+date: Lecture Week 11 -- Wed 11 December 2024
 transition: fade
 theme: killian
 width: 1920
 height: 1080
 margin: 0.05
 center: false
-revealjs-url: ../reveal.js
+revealjs-url: ../reveal.js2
 title-slide-attributes:
     data-background-color: rgb(0,47,108)	
     data-background-image: logowhite.png
@@ -24,12 +24,16 @@ title-slide-attributes:
 * Definitively testing large integers for primeness is computationally hard (i.e. long) for large primes. 
 * But having large primes or *pseudo-primes* is important for many cryptography applications.
 * Thankfully there are quicker *probabilistic* tests for primeness available. 
+    - such tests identify *pseudo-primes*, i.e. integers that share many properties of prime numbers or that are likely, to a high probability, to be prime. 
 
 **Background**
 
 * Recall Fermat's Little Theorem: If $p$ is a prime, and $a$ and integer coprime to $p$, then 
 $$ a^{p-1} \equiv 1 \pmod{p}.$$
-* This can be turned into a test for primality by efficiently searching for the breakdown of this condition when the modulus is not in fact prime. 
+* This can be turned into a test for primality by efficiently searching for the breakdown of this condition when the modulus is not in fact prime.
+* So if we find an $a$ that is coprime to $n$ but 
+$$ a^{n-1} \not \equiv 1 \pmod{n}$$
+then we can conclude that $n$ is not prime.  
 
 ## Miller-Rabin primality test. 
 
