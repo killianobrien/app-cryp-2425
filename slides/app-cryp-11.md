@@ -47,7 +47,7 @@ $$a^{n-1} \equiv a^{2^k q} \equiv 1 \pmod{n}.$$
 $$a^q, a^{2q}, a^{2^2 q} , a^{2^3 q}, \dots , a^{2^k q},$$
 and note that each element on this list is the square of the previous element. 
 * We know that the last element $a^{2^kq}$ is $\equiv 1 \pmod{n}$ if $n$ is prime. So this means that somewhere earlier in the list the element must be $\equiv +1$ or $-1 \pmod{n}$, since $\pm 1$ are the only two elements that square to $1$. 
-* So we will know for certain that $n$ is **not prime** is we encounter an element $a$, satisfying $1 \leq a \leq n-1$ where the list of residues modulo $n$
+* So we will know for certain that $n$ is **not prime** if we encounter an element $a$, satisfying $1 \leq a \leq n-1$ where the list of residues modulo $n$
 $$a^q, a^{2q}, a^{2^2 q} , a^{2^3 q}, \dots , a^{2^k q},$$
 does not contain any member congruent to $1$ or $-1$ modulo $n$. 
 
